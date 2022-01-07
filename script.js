@@ -1,6 +1,7 @@
 let rec;
 let showingHelp = false;
 let randomnum;
+let name;
 
 if (!("webkitSpeechRecognition" in window)) {
     var tts = new SpeechSynthesisUtterance("Hola! Parece que hay un error en tu navegador y/o microfono y no puedes usarme, lo lamento");
@@ -47,7 +48,29 @@ function start(event) {
         let message;
         console.log(results);
         if (results.includes("Hola")) {
-            let saludos = ["Holaaa!", "Que tal??", "Todo bien??", "Buenos dias, tardes o noches"]
+            if (name != undefined) {
+                let saludos = ["Holaaa, " + name + "!", "Que tal, " + name + "??", "Todo bien, " + name + "??", "Buenos dias, tardes o noches " + name]
+                message = saludos[Math.floor(Math.random() * saludos.length)];
+                var tts = new SpeechSynthesisUtterance(message);
+
+                tts.pitch = 1.0;
+                tts.rate = 1.0;
+                tts.lang = "es-ES";
+
+                speechSynthesis.speak(tts);
+            }else{
+                let saludos = ["Holaaa!", "Que tal??", "Todo bien??", "Buenos dias, tardes o noches"]
+                message = saludos[Math.floor(Math.random() * saludos.length)];
+                var tts = new SpeechSynthesisUtterance(message);
+
+                tts.pitch = 1.0;
+                tts.rate = 1.0;
+                tts.lang = "es-ES";
+
+                speechSynthesis.speak(tts);
+            }
+        }else if (results.includes("me gusta")){
+            let saludos = ["¿Enserio? A mi tambien me encanta", "Si, esta bueno/a", "Nah, no estoy de acuerdo", "Prefiero otras cosas"];
             message = saludos[Math.floor(Math.random() * saludos.length)];
             var tts = new SpeechSynthesisUtterance(message);
 
@@ -56,9 +79,47 @@ function start(event) {
             tts.lang = "es-ES";
 
             speechSynthesis.speak(tts);
+        }else if (results.includes("Tengo") || results.includes("tengo")) {
+
+            let age = results.slice(5, 40);
+            if (age > 60) {
+                message = "¿Como comprendes como usar esto? Me parece increible, por mas gente de edad avanzada con conocimientos, muy bien viejo/a;";
+            }else if (age > 40) {
+                message = "Me encanta hablar con boomers, me caes bien";
+            }else if (age > 30) {
+                message = "Me encanta hablar con jovenes, crack"
+            }else if (age > 20) {
+                message = "Eres joven";
+            }else if (age > 10) {
+                message = "Impresionante que manejes esto con esa edad como su propio desarrollador, muy bien";
+            }else if (age > 5) {
+                message = "Que- COMO?!";
+            }
+
+            var tts = new SpeechSynthesisUtterance(message);
+
+            tts.pitch = 1.0;
+            tts.rate = 1.0;
+            tts.lang = "es-AR";
+
+            speechSynthesis.speak(tts);
+
+        }else if (results.includes("Mi nombre es")) {
+
+            name = results.slice(12, 40);
+            let answers = ["Me encanta ese nombre", "Esta bien, no esta mal tu nombre", "Lindo nombre", "Mucho gusto", "No me gusta"]
+            message = name + ", " + answers[Math.floor(Math.random() * answers.length)];
+            var tts = new SpeechSynthesisUtterance(message);
+
+            tts.pitch = 1.0;
+            tts.rate = 1.0;
+            tts.lang = "es-AR";
+
+            speechSynthesis.speak(tts);
+
         }else if (results.includes("decí") || results.includes("Desi")){
 
-            let messageToSay = results.slice(4, 40);
+            let messageToSay = results.slice(4, 250);
             message = messageToSay;
             var tts = new SpeechSynthesisUtterance(message);
 
@@ -316,8 +377,7 @@ function start(event) {
             speechSynthesis.speak(tts);
             window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
             message = "Okey :)";
-        }
-        else{
+        }else{
 
             message = "Disculpa, no te entendi";
             var tts = new SpeechSynthesisUtterance(message);
