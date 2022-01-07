@@ -8,8 +8,30 @@
 <body id="bodyPage">
     <div id="text"></div>
     <center>
-    <input type="button" id="startListener" value="      Hablar      " onclick="rec.start()">
+        <input type="button" id="startListener" value="      Hablar      " onclick="rec.start()">
     </center>
+    <br>
+    <div id="help" style="display: in-line;">
+        <p style="color: black;">
+            <span style="font-size: 30px;"><b>Comandos:</b></span>
+            <br>
+            <span style="font-size: 22px;"><b>Hola: </b>Mora saludara.<br></span>
+            <span style="font-size: 22px;"><b>Buscar en YouTube *busqueda*: </b> Busca en YouTube lo que quieras.<br></span>
+            <span style="font-size: 22px;"><b>Buscar en Spotify *busqueda*: </b> Busca en Spotify lo que quieras.<br></span>
+            <span style="font-size: 22px;"><b>Cuentame un chiste: </b> Cuenta un chiste aleatorio.<br></span>
+            <span style="font-size: 22px;"><b>Llevame a un sitio aleatorio: </b> Abre una pagina aleatoria inutil para divertirse.<br></span>
+            <span style="font-size: 22px;"><b>Deci *mensaje*: </b> Repite lo que tu dices.<br></span>
+            <span style="font-size: 22px;"><b>¿Quien eres? / ¿Cual es tu nombre?</b><br></span>
+            <span style="font-size: 22px;"><b>¿De donde eres?</b><br></span>
+            <span style="font-size: 22px;"><b>¿Cual es tu edad?</b><br></span>
+            <span style="font-size: 22px;"><b>¿Que dia es?</b><br></span>
+            <span style="font-size: 22px;"><b>¿Que hora es?</b><br></span>
+        </p>
+    </div>
+    <center>
+    <p id="credits">Programado por Thiago Grillo</p>
+    </center>
+    
     <script>
         document.getElementById("startListener").addEventListener('click', function() {
             document.getElementById("text").innerHTML = `
