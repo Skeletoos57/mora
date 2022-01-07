@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Mora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="bodyPage">
+    <div id="text"></div>
+    <center>
+    <input type="button" id="startListener" value="      Hablar      " onclick="rec.start()">
+    </center>
+    <script>
+        document.getElementById("startListener").addEventListener('click', function() {
+            document.getElementById("text").innerHTML = `
+                Escuchando...
+            `
+        })
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
