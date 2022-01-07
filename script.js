@@ -1,5 +1,6 @@
 let rec;
 let showingHelp = false;
+let randomnum;
 
 if (!("webkitSpeechRecognition" in window)) {
     var tts = new SpeechSynthesisUtterance("Hola! Parece que hay un error en tu navegador y/o microfono y no puedes usarme, lo lamento");
@@ -55,6 +56,18 @@ function start(event) {
             tts.lang = "es-ES";
 
             speechSynthesis.speak(tts);
+        }else if (results.includes("decí") || results.includes("Desi")){
+
+            let messageToSay = results.slice(4, 40);
+            message = messageToSay;
+            var tts = new SpeechSynthesisUtterance(message);
+
+            tts.pitch = 1.0;
+            tts.rate = 1.0;
+            tts.lang = "es-AR";
+
+            speechSynthesis.speak(tts);
+
         }else if (results.includes('Buscar en YouTube')) {
             let search = results.slice(18, 40);
             if (search == "") {
@@ -193,10 +206,88 @@ function start(event) {
             speechSynthesis.speak(tts);
             window.open(urls[Math.floor(Math.random() * urls.length)]);
 
-        }else if (results.includes("decí") || results.includes("Desi")){
+        }else if (results.includes("Juguemos a adivinar un número")){
 
-            let messageToSay = results.slice(4, 40);
-            message = messageToSay;
+            message = "Muy bien! Acabo de elejir un numero aleatorio del 0 al 10. Intenta adivinar diciendo 'El numero es ...'";
+            randomnum = Math.floor(Math.random() * 10);
+            var tts = new SpeechSynthesisUtterance(message);
+
+            tts.pitch = 1.0;
+            tts.rate = 1.0;
+            tts.lang = "es-ES";
+
+            speechSynthesis.speak(tts);
+
+        }else if (results.includes("el número es")) {
+
+            let posible = results.slice(13, 40);
+            if (randomnum == undefined) {
+                message = "Tienes que iniciar el juego, di 'Juguemos a adivinar un número' para empezar";
+                var tts = new SpeechSynthesisUtterance(message);
+
+                tts.pitch = 1.0;
+                tts.rate = 1.0;
+                tts.lang = "es-AR";
+
+                speechSynthesis.speak(tts);
+            }else{
+                if (posible > 10) {
+                    message = "Eleji un numero menor a 10";
+                    var tts = new SpeechSynthesisUtterance(message);
+
+                    tts.pitch = 1.0;
+                    tts.rate = 1.0;
+                    tts.lang = "es-AR";
+
+                    speechSynthesis.speak(tts);
+                }else{
+                    if (posible == randomnum) {
+                        message = "¡Correcto! Has adivinado, me he divertido mucho jugando :)";
+                        var tts = new SpeechSynthesisUtterance(message);
+                        randomnum = null;
+                        tts.pitch = 1.0;
+                        tts.rate = 1.0;
+                        tts.lang = "es-AR";
+
+                        speechSynthesis.speak(tts);
+                    }else{
+                        message = "¡Incorrecto! Intenta de nuevo";
+                        var tts = new SpeechSynthesisUtterance(message);
+                        tts.pitch = 1.0;
+                        tts.rate = 1.0;
+                        tts.lang = "es-AR";
+
+                        speechSynthesis.speak(tts);
+                    }
+                }
+
+            }
+        }else if (results.includes("me rindo")) {
+
+            if (randomnum != undefined) {
+                message = "JA JA! Gano una vez mas, el numero era " + randomnum;
+                var tts = new SpeechSynthesisUtterance(message);
+                randomnum = undefined;
+                tts.pitch = 1.0;
+                tts.rate = 1.0;
+                tts.lang = "es-AR";
+
+                speechSynthesis.speak(tts);
+            }else{
+                message = "Tienes que iniciar el juego, di 'Juguemos a adivinar un número' para empezar";
+                var tts = new SpeechSynthesisUtterance(message);
+
+                tts.pitch = 1.0;
+                tts.rate = 1.0;
+                tts.lang = "es-AR";
+
+                speechSynthesis.speak(tts);
+
+            }
+
+        }else if (results.includes("sí")) {
+            let answers = ["Enserio?", "Sii?", "No.... punto", "Ok"]
+            message = answers[Math.floor(Math.random() * answers.length)];
             var tts = new SpeechSynthesisUtterance(message);
 
             tts.pitch = 1.0;
@@ -204,8 +295,29 @@ function start(event) {
             tts.lang = "es-AR";
 
             speechSynthesis.speak(tts);
+        }else if (results.includes("no")) {
+            let answers = ["Por que?", "No?", "SI.... punto", "Okeyy"]
+            message = answers[Math.floor(Math.random() * answers.length)];
+            var tts = new SpeechSynthesisUtterance(message);
 
-        }else{
+            tts.pitch = 1.0;
+            tts.rate = 1.0;
+            tts.lang = "es-AR";
+
+            speechSynthesis.speak(tts);
+        }else if (results.includes("Muéstrame algo")) {
+            message = "Okey";
+            var tts = new SpeechSynthesisUtterance(message);
+
+            tts.pitch = 1.0;
+            tts.rate = 1.0;
+            tts.lang = "es-AR";
+
+            speechSynthesis.speak(tts);
+            window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+            message = "Okey :)";
+        }
+        else{
 
             message = "Disculpa, no te entendi";
             var tts = new SpeechSynthesisUtterance(message);
@@ -221,4 +333,3 @@ function start(event) {
         document.getElementById('text').innerHTML = message;
     }
 }
-
