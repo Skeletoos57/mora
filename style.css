@@ -41,3 +41,12 @@ div {
     font-size: 10px;
     font-family: inherit;
 }
+
+
+#credits {
+    padding: 20px;
+    margin: 13px;
+    background-color: #fff;
+    font-size: 10px;
+    font-family: inherit;
+}
