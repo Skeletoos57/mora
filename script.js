@@ -1,4 +1,5 @@
 let rec;
+let showingHelp = false;
 
 if (!("webkitSpeechRecognition" in window)) {
     var tts = new SpeechSynthesisUtterance("Hola! Parece que hay un error en tu navegador y/o microfono y no puedes usarme, lo lamento");
@@ -128,7 +129,7 @@ function start(event) {
 
         }else if (results.includes("cuál es tu edad")){
 
-            message = "Supongo que en años reales tengo menos de 1 año, pero mi edad en años no reales es 24";
+            message = "Supongo que en años reales tengo menos de 1 año, pero mi edad en años no reales es 24, la eleji yo misma :)";
             var tts = new SpeechSynthesisUtterance(message);
 
             tts.pitch = 1.0;
@@ -142,7 +143,7 @@ function start(event) {
             let now = new Date();
             let days = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"];
             let months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
-            message = "Hoy es" + days[now.getDay()-1] + now.getDate() + " de " + months[now.getMonth()];
+            message = "Hoy es " + days[now.getDay()-1] + " " + now.getDate() + " de " + months[now.getMonth()] + " de " + now.getFullYear();
             var tts = new SpeechSynthesisUtterance(message);
 
             tts.pitch = 1.0;
@@ -150,6 +151,7 @@ function start(event) {
             tts.lang = "es-AR";
 
             speechSynthesis.speak(tts);
+            message = "Hoy es " + days[now.getDay()-1] + " " + now.getDate() + "/" + (now.getMonth()+1) + "/" + now.getFullYear();
         }else if (results.includes("qué hora es")){
 
             let now = new Date();
@@ -161,6 +163,7 @@ function start(event) {
             tts.lang = "es-AR";
 
             speechSynthesis.speak(tts);
+            message = "Son las " + now.getHours() + ":" + now.getMinutes();
         }else if (results.includes("Cuéntame un chiste")){
 
             let jokes = ["¿Sabes que les pasa a los programadores cuando mueren?, son almacenados en la nube jaja",
@@ -189,6 +192,19 @@ function start(event) {
 
             speechSynthesis.speak(tts);
             window.open(urls[Math.floor(Math.random() * urls.length)]);
+
+        }else if (results.includes("decí") || results.includes("Desi")){
+
+            let messageToSay = results.slice(4, 40);
+            message = messageToSay;
+            var tts = new SpeechSynthesisUtterance(message);
+
+            tts.pitch = 1.0;
+            tts.rate = 1.0;
+            tts.lang = "es-AR";
+
+            speechSynthesis.speak(tts);
+
         }else{
 
             message = "Disculpa, no te entendi";
@@ -205,3 +221,4 @@ function start(event) {
         document.getElementById('text').innerHTML = message;
     }
 }
+
