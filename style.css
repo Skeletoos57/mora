@@ -37,16 +37,18 @@ div {
 #credits {
     padding: 20px;
     margin: 13px;
-    background-color: #fff;
     font-size: 10px;
     font-family: inherit;
 }
 
-
-#credits {
-    padding: 20px;
-    margin: 13px;
+#theme {
     background-color: #fff;
-    font-size: 10px;
+    font-size: 25px;
     font-family: inherit;
+
+}
+
+#speed {
+    border: 1px red;
+    width: 15%;
 }
