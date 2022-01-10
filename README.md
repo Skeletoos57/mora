@@ -32,7 +32,7 @@ Aun esta en beta, pero ya se puede usar :D
   - Creditos e informacion de version al final de la pagina
   - Nuevos estilos y adornos simples
 
-- Version 0.4 - 10/01/2022
+- Version 0.4 - 9/01/2022
   - Añadimos comandos
     - Buscar en Google ...
     - Buscar en Youtube ...
@@ -45,4 +45,5 @@ Aun esta en beta, pero ya se puede usar :D
     - Ajustar "Velocidad"
     - Ajustar "Volumen"
 
-- Version 0.5 (PROXIMAMENTE, YA EN DESARROLLO)
+- Version 0.5 - 11/01/2022
+  - Se puede alternar entre Modo Oscuro y Modo Claro
