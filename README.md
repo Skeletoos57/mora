@@ -48,8 +48,19 @@ Aun esta en beta, pero ya se puede usar :D
     - Ajustar "Volumen"
 
 - Version 0.5 - 11/01/2022
-  - Se puede alternar entre Modo Oscuro y Modo Claro
+  - Se añadio "Cambiar a Modo Oscuro/Claro" (predeterminadamente es claro)
   - Mejoras en algunos comandos y opciones:
     - Mejoras en "Una pregunta, ¿...?"
     - Mejoras en "Ajustar Tono de voz"
     - Buscar en Google ...
+
+- Version 0.6 - 13/01/2022 ( PROXIMAMENTE )
+  - Añadimos comandos:
+    - Buscar en Wikipedia ...
+    - ¿Que significa ...?
+    - Dime un numero aleatorio
+    - Dime un color aleatorio
+  - Ahora, el volumen predeterminado es el maximo: 10
+  - Correcciones en la palabra "Aqui"
+  - Correcciones en el Modo Oscuro
+  - Correcciones en la informacion de la version que aparece abajo de todo
