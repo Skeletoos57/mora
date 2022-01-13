@@ -114,8 +114,10 @@ function start(event) {
                     message = "Eres joven";
                 }else if (age > 10) {
                     message = "Impresionante que manejes esto con esa edad como su propio desarrollador, muy bien";
-                }else if (age < 5) {
+                }else if (age > 5) {
                     message = "Que- COMO?!";
+                }else{
+                    message = "Disculpa, no te entendi";
                 }
 
                 var tts = new SpeechSynthesisUtterance(message);
@@ -217,6 +219,31 @@ function start(event) {
                 }
                 let link = "https://open.spotify.com/search/" + search;
                 message = "He encontrado esto en Spotify sobre " + search + ", espero que sea lo que buscas";
+                var tts = new SpeechSynthesisUtterance(message);
+
+                tts.pitch = 1.0;
+                tts.rate = 1.0;
+                tts.lang = "es-AR";
+
+                speechSynthesis.speak(tts);
+                window.open(link);
+
+            }else if (results.includes("Buscar en Wikipedia")) {
+                let search = results.slice(20, 40);
+                if (search == "") {
+                    message = "Disculpa, no te he entendido, repitelo";
+                    var tts = new SpeechSynthesisUtterance(message);
+
+                    tts.pitch = 1.0;
+                    tts.rate = 1.0;
+                    tts.lang = "es-AR";
+
+                    speechSynthesis.speak(tts);
+                    document.getElementById('text').innerHTML = message;
+                    window.open(link);
+                }
+                let link = "https://es.wikipedia.org/wiki/" + search;
+                message = "He encontrado esto en Wikipedia sobre " + search + ", espero que sea lo que buscas";
                 var tts = new SpeechSynthesisUtterance(message);
 
                 tts.pitch = 1.0;
@@ -435,8 +462,7 @@ function start(event) {
 
                 speechSynthesis.speak(tts);
             }else if (results.includes("me amas")) {
-                let answers = ["Si claro, eres mi pasatiempo ahora mismo para poder pasar el rato en mi infinita vida como pagina web, muchas gracias por estar aki <3"];
-                message = answers[0];
+                message = "Si claro, eres mi pasatiempo ahora mismo para poder pasar el rato en mi infinita vida como pagina web, muchas gracias por estar aki <3";
                 var tts = new SpeechSynthesisUtterance(message);
 
                 tts.pitch = 1.0;
@@ -444,6 +470,8 @@ function start(event) {
                 tts.lang = "es-AR";
 
                 speechSynthesis.speak(tts);
+                message = "Si claro, eres mi pasatiempo ahora mismo para poder pasar el rato en mi infinita vida como pagina web, muchas gracias por estar aqui <3";
+
             }else if (results.includes("dime una frase para completar")) {
                 let situaciones = ["Una vieja cayendo de ", "Me arrodille, junto a ella, y profundamente, con toda sinceridad, le dije ", "Esperame! Antes que te vayas ", "Lo primero que haria al ver a un alien es ", "Tengo ganas de "]
                 message = situaciones[Math.floor(Math.random() * situaciones.length)];
@@ -457,7 +485,53 @@ function start(event) {
 
                 speechSynthesis.speak(tts);
 
-              }else{
+            }else if (results.includes("Qué significa")) {
+                let word = results.slice(14, 60);
+
+                message = "Segun la Real Academia Española, aki esta la definicion a la palabra " + word;
+                var tts = new SpeechSynthesisUtterance(message);
+
+                tts.pitch = 1.0;
+                tts.rate = 1.0;
+                tts.lang = "es-AR";
+
+                speechSynthesis.speak(tts);
+
+                window.open("https://dle.rae.es/" + word);
+                message = "Segun la Real Academia Española, aqui esta la definicion a la palabra " + word;
+
+            }else if (results.includes("Dime un número aleatorio")) {
+
+                let num = Math.floor(Math.random() * 100);
+                message = "Aki esta tu numero: " + num;
+
+                var tts = new SpeechSynthesisUtterance(message);
+
+                tts.pitch = 1.0;
+                tts.rate = 1.0;
+                tts.lang = "es-AR";
+
+                speechSynthesis.speak(tts);
+                message = "Aqui esta tu numero: " + num;
+
+            }else if (results.includes("Dime un color aleatorio")) {
+
+                let colors = ["Rojo", "Azul", "Amarillo", "Verde", "Naranja", "Violeta", "Blanco" , "Negro", "Gris", "Marron", "Cian", "Esmeralda", "Celeste"];
+                let variables = ["", "Oscuro", "Pastel", "Claro", "Chillón", "Neon", "Fluorescente"];
+                
+                let finalColor = colors[Math.floor(Math.random() * colors.length)] + " " + variables[Math.floor(Math.random() * variables.length)];
+                message = "Aki esta tu color: " + finalColor;
+
+                var tts = new SpeechSynthesisUtterance(message);
+
+                tts.pitch = 1.0;
+                tts.rate = 1.0;
+                tts.lang = "es-AR";
+
+                speechSynthesis.speak(tts);
+                message = "Aqui esta tu color: " + finalColor;
+
+            }else{
 
                 message = "Disculpa, no te entendi";
                 var tts = new SpeechSynthesisUtterance(message);
