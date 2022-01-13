@@ -26,6 +26,12 @@ div {
     font-size: 30px;
     font-family: inherit;
     color: #fff;
+
+    cursor: pointer;
+}
+
+.button:active {
+    transform: scale(.9);
 }
 
 #showhelp {
@@ -60,4 +66,21 @@ div {
 
 #volume {
     color: #000;
+}
+
+#help:hover {
+    transform: scale(1.01);
+}
+
+#options:hover {
+    transform: scale(1.01);
+}
+
+#credits:hover {
+    font-size: 15px;
+    transform: scale(1.02);
+}
+
+#text:hover {
+    transform: scale(1.02);
 }
