@@ -8,7 +8,7 @@
 <body id="bodyPage">
         <div id="text"></div>
         <center>
-            <input type="button" id="startListener" value="      Hablar      " onclick="rec.start()">
+            <input type="button" id="startListener" class="button" value="      Hablar      " onclick="rec.start()">
         </center>
         <br>
         <div id="help" style="display: in-line;">
@@ -19,6 +19,7 @@
                 <span style="font-size: 22px;"><b>Buscar en Google *busqueda*: </b> Busca en Google lo que quieras.<br></span>
                 <span style="font-size: 22px;"><b>Buscar en YouTube *busqueda*: </b> Busca en YouTube lo que quieras.<br></span>
                 <span style="font-size: 22px;"><b>Buscar en Spotify *busqueda*: </b> Busca en Spotify lo que quieras.<br></span>
+                <span style="font-size: 22px;"><b>Buscar en Wikipedia *busqueda*: </b> Busca en Wikipedia lo que quieras.<br></span>
                 <span style="font-size: 22px;"><b>Cuentame un chiste: </b> Cuenta un chiste aleatorio.<br></span>
                 <span style="font-size: 22px;"><b>Llevame a un sitio aleatorio: </b> Abre una pagina aleatoria inutil para divertirse.<br></span>
                 <span style="font-size: 22px;"><b>Deci *mensaje*: </b> Repite lo que tu dices.<br></span>
@@ -31,6 +32,7 @@
                 <span style="font-size: 22px;"><b>¿Que hora es?</b><br></span>
                 <span style="font-size: 22px;"><b>¿Me amas?</b><br></span>
                 <span style="font-size: 22px;"><b>Una pregunta... *tu pregunta*</b><br></span>
+                <span style="font-size: 22px;"><b>¿Que significa *palabra*?: </b> Busca el significado de una palabra segun la Real Academia Española</span>
                 <br>
                 <span style="font-size: 22px;"><b>Mi nombre es *tu nombre*</b><br></span>
                 <span style="font-size: 22px;"><b>Tengo *edad* años</b><br></span>
@@ -48,7 +50,7 @@
             <p style="color: black;">
                 <span style="font-size: 30px;"><b>Opciones:</b></span>
                 <br>
-                <span style="font-size: 25px;"><b>Volumen:  </b>  <input type="number" value=0.5 id="volume" min="0" max="10"><span><br>
+                <span style="font-size: 25px;"><b>Volumen:  </b>  <input type="number" value=10 id="volume" min="0" max="10"><span><br>
                 <span style="font-size: 15px; color: red;">ADVERTENCIA: El volumen debe ser menor a 10, si es mayor a 10, el volumen sera 1</span>
                 <br>
                 <br>
