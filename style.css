@@ -23,6 +23,12 @@ div {
     background-color: #fff;
     font-size: 30px;
     font-family: inherit;
+
+    cursor: pointer;
+}
+
+.button:active {
+    transform: scale(.9);
 }
 
 #showhelp {
@@ -51,4 +57,21 @@ div {
 #speed {
     border: 1px red;
     width: 15%;
+}
+
+#help:hover {
+    transform: scale(1.01);
+}
+
+#options:hover {
+    transform: scale(1.01);
+}
+
+#credits:hover {
+    font-size: 15px;
+    transform: scale(1.02);
+}
+
+#text:hover {
+    transform: scale(1.02);
 }
