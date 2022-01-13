@@ -64,3 +64,4 @@ Aun esta en beta, pero ya se puede usar :D
   - Correcciones en la palabra "Aqui"
   - Correcciones en el Modo Oscuro
   - Correcciones en la informacion de la version que aparece abajo de todo
+  - Efectos visuales añadidos
