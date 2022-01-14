@@ -54,7 +54,7 @@ Aun esta en beta, pero ya se puede usar :D
     - Mejoras en "Ajustar Tono de voz"
     - Buscar en Google ...
 
-- Version 0.6 - 13/01/2022 ( PROXIMAMENTE )
+- Version 0.6 - 13/01/2022
   - Añadimos comandos:
     - Buscar en Wikipedia ...
     - ¿Que significa ...?
@@ -65,3 +65,6 @@ Aun esta en beta, pero ya se puede usar :D
   - Correcciones en el Modo Oscuro
   - Correcciones en la informacion de la version que aparece abajo de todo
   - Efectos visuales añadidos
+
+- Version 0.7 - ??/01/2022 ( PROXIMAMENTE )
+  - Se añadio la capacidad de escribir para hablar con Mora sin necesidad de usar el microfono
