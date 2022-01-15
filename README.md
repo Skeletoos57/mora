@@ -66,5 +66,5 @@ Aun esta en beta, pero ya se puede usar :D
   - Correcciones en la informacion de la version que aparece abajo de todo
   - Efectos visuales añadidos
 
-- Version 0.7 - 15/01/2022 ( PROXIMAMENTE )
+- Version 0.7 - 15/01/2022
   - Se añadio la capacidad de escribir para hablar con Mora sin necesidad de usar el microfono
