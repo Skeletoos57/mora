@@ -70,10 +70,14 @@ Aun esta en beta, pero ya se puede usar :D
   - Se añadio la capacidad de escribir para hablar con Mora sin necesidad de usar el microfono
 
 - Version 0.8 - 18/01/2022 ( PROXIMAMENTE )
-  - Añadimos comandos
+  - Añadimos comandos:
     - Calcula *numero* + / - *numero*
       - NOTA: Solo se puede sumar y restar hablando, pero puedes hacer cualquier cuenta si la escribes (pequeña limitacion)
     - Cambiar Tema a Naranja / Verde / Violeta / Blanco / Negro / Predeterminado
   - Se mejoro la introduccion de texto
   - Arreglos en el volumen
   - Se arreglo el link a la pagina oficial de los desarrolladores (no funcionaba)
+
+- Version 0.9 - ??/01/2022 ( PROXIMAMENTE )
+  - Añadimos comandos:
+    - Dime una letra
