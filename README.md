@@ -81,3 +81,6 @@ Aun esta en beta, pero ya se puede usar :D
 - Version 0.9 - ??/01/2022 ( PROXIMAMENTE )
   - Añadimos comandos:
     - Dime una letra
+  - Se cambiaron estos comandos:
+    - "Dime un color aleatorio" se cambio a "Dime un color"
+    - "Dime un numero aleatorio" se cambio a "Dime un numero"
