@@ -76,3 +76,4 @@ Aun esta en beta, pero ya se puede usar :D
     - Cambiar Tema a Naranja / Verde / Violeta / Blanco / Negro / Predeterminado
   - Se mejoro la introduccion de texto
   - Arreglos en el volumen
+  - Se arreglo el link a la pagina oficial de los desarrolladores (no funcionaba)
