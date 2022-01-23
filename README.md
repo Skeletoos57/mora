@@ -79,7 +79,7 @@ Aun esta en beta, pero ya se puede usar :D
   - Se arreglo el link a la pagina oficial de los desarrolladores (no funcionaba)
   - Se elimino el Modo Oscuro. Sera re-hecho y volvera en la version 1.0
 
-- Version 0.9 - ??/01/2022 ( PROXIMAMENTE )
+- Version 0.9 - 27/01/2022 ( PROXIMAMENTE )
   - Añadimos comandos:
     - Dime una letra
   - Se cambiaron estos comandos:
