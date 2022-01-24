@@ -77,11 +77,13 @@ Aun esta en beta, pero ya se puede usar :D
   - Se mejoro la introduccion de texto
   - Arreglos en el volumen
   - Se arreglo el link a la pagina oficial de los desarrolladores (no funcionaba)
-  - Se elimino el Modo Oscuro. Sera re-hecho y volvera en la version 1.0
+  - Se elimino el Modo Oscuro por errores
 
-- Version 0.9 - 27/01/2022 ( PROXIMAMENTE )
+- Version 0.9 - 23/01/2022 ( PROXIMAMENTE )
   - Añadimos comandos:
     - Dime una letra
+    - Recomiendame un juego
   - Se cambiaron estos comandos:
     - "Dime un color aleatorio" se cambio a "Dime un color"
     - "Dime un numero aleatorio" se cambio a "Dime un numero"
+  - El modo oscuro ahora esta obsoleto (no recibira mas actualizaciones) pero aun puede usarse
