@@ -79,7 +79,7 @@ Aun esta en beta, pero ya se puede usar :D
   - Se arreglo el link a la pagina oficial de los desarrolladores (no funcionaba)
   - Se elimino el Modo Oscuro por errores
 
-- Version 0.9 - 23/01/2022 ( PROXIMAMENTE )
+- Version 0.9 - 25/01/2022 ( PROXIMAMENTE )
   - Añadimos comandos:
     - Dime una letra
     - Recomiendame un juego
